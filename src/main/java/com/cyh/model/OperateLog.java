@@ -4,6 +4,7 @@ import java.util.Date;
 
 /**
  * 日志记录对象
+ * @author Pc
  */
 public class OperateLog {
     private String id;

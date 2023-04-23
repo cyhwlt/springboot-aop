@@ -6,6 +6,7 @@ import com.cyh.model.OperateLog;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
@@ -20,7 +21,6 @@ public class LogAspect {
     /**
      * 切入点
      */
-//    @Pointcut("@annotation(OperateLogAnnotation)")
     @Pointcut("@annotation(com.cyh.annotation.OperateLogAnnotation)")
     public void pointcut(){}
 
@@ -30,6 +30,7 @@ public class LogAspect {
      */
     @Around("pointcut()")
     public Object doAround(final ProceedingJoinPoint joinPoint) throws Throwable{
+        System.out.println("环绕通知开始");
         long time = System.currentTimeMillis();
         Object proceed = joinPoint.proceed(); // proceed方法就是用于启动目标方法执行的，在此之前相当于前置通知，之后相当于后置通知
         time = System.currentTimeMillis() - time;
@@ -48,7 +49,7 @@ public class LogAspect {
         }
         olog.setOperationType(annotation.operateType().getValue());
         olog.setOperationUnit(annotation.operateUnit().getValue());
-        System.out.println("记录日志：" + olog.toString());
+        System.out.println("记录日志：" + olog);
         return proceed;
     }
 }

@@ -1,0 +1,8 @@
+E:\weixin\jenkins_test\springboot-aop\src\main\java\com\cyh\controller\UserController.java
+E:\weixin\jenkins_test\springboot-aop\src\main\java\com\cyh\annotation\OperateLogAnnotation.java
+E:\weixin\jenkins_test\springboot-aop\src\main\java\com\cyh\aop\LogAspect.java
+E:\weixin\jenkins_test\springboot-aop\src\main\java\com\cyh\enums\OperateUnit.java
+E:\weixin\jenkins_test\springboot-aop\src\main\java\com\cyh\model\OperateLog.java
+E:\weixin\jenkins_test\springboot-aop\src\main\java\com\cyh\service\UserService.java
+E:\weixin\jenkins_test\springboot-aop\src\main\java\com\cyh\enums\OperateType.java
+E:\weixin\jenkins_test\springboot-aop\src\main\java\com\cyh\AopApplication.java
